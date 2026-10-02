@@ -59,3 +59,21 @@ When we run `next dev` the next time, Next.js will start looking for any `.ts` o
 Next.js has built-in TypeScript declarations, so we'll get autocompletion for Next.js' modules straight away.
 
 A `type-check` script is also added to `package.json`, which runs TypeScript's `tsc` CLI in `noEmit` mode to run type-checking separately. You can then include this, for example, in your `test` scripts.
+
+## Storybook
+
+### Playwright with Chromium
+
+Installation skipped during setup:
+
+```
+Playwright browser binaries are necessary for @storybook/addon-vitest. The
+│  download can take some time. If you don't want to wait, you can skip the
+│  installation and run the following command manually later:
+│  npx playwright install chromium --with-deps
+│
+◇  Do you want to install Playwright with Chromium now?
+│  No
+│
+▲  Playwright installation skipped
+```
