@@ -62,6 +62,10 @@ A `type-check` script is also added to `package.json`, which runs TypeScript's `
 
 ## Storybook
 
+### Setup
+
+https://chakra-ui.com/docs/get-started/frameworks/storybook
+
 ### Playwright with Chromium
 
 Installation skipped during setup:

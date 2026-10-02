@@ -1,3 +1,5 @@
+import { ChakraProvider, defaultSystem } from "@chakra-ui/react"
+import { withThemeByClassName } from "@storybook/addon-themes"
 import type { Preview } from '@storybook/nextjs-vite'
 
 const preview: Preview = {
@@ -16,6 +18,17 @@ const preview: Preview = {
       test: 'todo'
     }
   },
+  decorators: [
+    (Story) => (
+      <ChakraProvider value={defaultSystem}>
+        <Story />
+      </ChakraProvider>
+    ),
+    withThemeByClassName({
+      defaultTheme: "light",
+      themes: { light: "", dark: "dark" },
+    }),
+  ],
 };
 
 export default preview;
