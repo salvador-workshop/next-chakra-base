@@ -1,4 +1,5 @@
 import React, { ReactNode } from "react";
+import { Provider } from "@/src/components/ui/provider"
 import Link from "next/link";
 import Head from "next/head";
 
@@ -8,7 +9,7 @@ type Props = {
 };
 
 const Layout = ({ children, title = "This is the default title" }: Props) => (
-  <div>
+  <div suppressHydrationWarning={true}>
     <Head>
       <title>{title}</title>
       <meta charSet="utf-8" />
@@ -21,7 +22,7 @@ const Layout = ({ children, title = "This is the default title" }: Props) => (
         <a href="/api/users">Users API</a>
       </nav>
     </header>
-    {children}
+    <Provider>{children}</Provider>
     <footer>
       <hr />
       <span>I'm here to stay (Footer)</span>
